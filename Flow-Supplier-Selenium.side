@@ -1,0 +1,203 @@
+{
+  "id": "f9b1e71f-494f-47d7-8546-e09d416756d8",
+  "version": "2.0",
+  "name": "Flow Supplier",
+  "url": "https://app.sbiz-app.my.id",
+  "tests": [{
+    "id": "4e1b8c4a-54df-43cd-82f1-421203183e0a",
+    "name": "1. Flow Pemasok",
+    "commands": [{
+      "id": "9a5a6700-8e9b-495e-9788-5f62470ae8e2",
+      "comment": "1. Membuka halaman login",
+      "command": "open",
+      "target": "/home/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "window-size-id",
+      "comment": "2. Mengatur ukuran jendela browser",
+      "command": "setWindowSize",
+      "target": "1280x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "wait-user-sup",
+      "comment": "3. Menunggu kolom username",
+      "command": "waitForElementPresent",
+      "target": "name=username",
+      "targets": [["name=username", "name"]],
+      "value": "30000"
+    }, {
+      "id": "pause-1",
+      "comment": "4. Jeda sejenak sebelum input",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "exec-user-sup",
+      "comment": "5. Input Username (via Script)",
+      "command": "executeScript",
+      "target": "document.getElementsByName('username')[0].value='admin'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "exec-pass-sup",
+      "comment": "6. Input Password (via Script)",
+      "command": "executeScript",
+      "target": "document.getElementsByName('password')[0].value='1234'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "click-login-sup",
+      "comment": "7. Klik tombol Login",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [["name=submit", "name"]],
+      "value": ""
+    }, {
+      "id": "pause-2",
+      "comment": "8. Jeda proses login",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "nav-sup",
+      "comment": "9. Navigasi langsung ke halaman Pemasok",
+      "command": "open",
+      "target": "/suplier/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "wait-tab-sup",
+      "comment": "10. Menunggu tombol Tambah",
+      "command": "waitForElementPresent",
+      "target": "xpath=//input[@value='TAMBAH']",
+      "targets": [["xpath=//input[@value='TAMBAH']", "xpath:attributes"]],
+      "value": "30000"
+    }, {
+      "id": "click-tab-sup",
+      "comment": "11. Klik tombol Tambah",
+      "command": "click",
+      "target": "xpath=//input[@value='TAMBAH']",
+      "targets": [["xpath=//input[@value='TAMBAH']", "xpath:attributes"]],
+      "value": ""
+    }, {
+      "id": "wait-form-sup",
+      "comment": "12. Menunggu Form Input terbuka",
+      "command": "waitForElementPresent",
+      "target": "name=name",
+      "targets": [["name=name", "name"]],
+      "value": "30000"
+    }, {
+      "id": "pause-3",
+      "comment": "13. Jeda sebelum mengisi form",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "exec-name-sup",
+      "comment": "14. Input Nama Pemasok",
+      "command": "executeScript",
+      "target": "document.getElementsByName('name')[0].value='Pemasok Test'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "exec-desc-sup",
+      "comment": "15. Input Keterangan Pemasok",
+      "command": "executeScript",
+      "target": "document.getElementsByName('description')[0].value='Keterangan otomatis dari script'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "click-save-sup",
+      "comment": "16. Simpan Pemasok Baru",
+      "command": "click",
+      "target": "xpath=//input[@value='SIMPAN']",
+      "targets": [["xpath=//input[@value='SIMPAN']", "xpath:attributes"]],
+      "value": ""
+    }, {
+      "id": "pause-4",
+      "comment": "17. Jeda setelah simpan",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "click-edit-sup",
+      "comment": "18. Cari 'Pemasok Test' dan klik Edit",
+      "command": "click",
+      "target": "xpath=//tr[td[contains(.,'Pemasok Test')]]//input[@value='EDIT']",
+      "targets": [["xpath=//tr[td[contains(.,'Pemasok Test')]]//input[@value='EDIT']", "xpath:attributes"]],
+      "value": ""
+    }, {
+      "id": "wait-edit-sup",
+      "comment": "19. Menunggu Form Edit",
+      "command": "waitForElementPresent",
+      "target": "name=name",
+      "targets": [["name=name", "name"]],
+      "value": "30000"
+    }, {
+      "id": "exec-name-edit-sup",
+      "comment": "20. Update Nama Pemasok",
+      "command": "executeScript",
+      "target": "document.getElementsByName('name')[0].value='Pemasok Test Edited'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "click-save-edit-sup",
+      "comment": "21. Simpan Perubahan",
+      "command": "click",
+      "target": "xpath=//input[@value='SIMPAN']",
+      "targets": [["xpath=//input[@value='SIMPAN']", "xpath:attributes"]],
+      "value": ""
+    }, {
+      "id": "pause-5",
+      "comment": "22. Jeda setelah edit",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bypass-alert-sup",
+      "comment": "23. Bypass popup konfirmasi hapus",
+      "command": "executeScript",
+      "target": "window.confirm = function() { return true; }",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "click-del-sup",
+      "comment": "24. Cari 'Pemasok Test' dan klik Hapus",
+      "command": "click",
+      "target": "xpath=//tr[td[contains(.,'Pemasok Test')]]//input[@value='HAPUS']",
+      "targets": [["xpath=//tr[td[contains(.,'Pemasok Test')]]//input[@value='HAPUS']", "xpath:attributes"]],
+      "value": ""
+    }, {
+      "id": "pause-6",
+      "comment": "25. Jeda setelah hapus",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "logout-sup",
+      "comment": "26. Logout dari aplikasi",
+      "command": "open",
+      "target": "/login/signout.php",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "3f32ea87-2c14-4627-8cb1-dce413ea4228",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4e1b8c4a-54df-43cd-82f1-421203183e0a"]
+  }],
+  "urls": ["https://app.sbiz-app.my.id/"],
+  "plugins": []
+}

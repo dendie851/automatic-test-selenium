@@ -1,0 +1,223 @@
+{
+  "id": "0949712e-357e-4351-bcd3-196d82b3923b",
+  "version": "2.0",
+  "name": "Flow Expedition",
+  "url": "https://app.sbiz-app.my.id",
+  "tests": [{
+    "id": "7ed043ff-cd71-4ca3-acc2-02648b23fae7",
+    "name": " Flow Ekspedisi",
+    "commands": [{
+      "id": "f007efc9-bf94-4793-9587-96e3b8d78c81",
+      "comment": "1. Membuka halaman login",
+      "command": "open",
+      "target": "/home/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa62ec5a-ce0b-4ab9-bb0c-fabc62a28650",
+      "comment": "2. Mengatur ukuran jendela browser",
+      "command": "setWindowSize",
+      "target": "1280x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "wait-user-exp",
+      "comment": "3. Menunggu kolom username muncul",
+      "command": "waitForElementPresent",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "pause-1",
+      "comment": "4. Jeda sejenak sebelum input",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "type-user-exp",
+      "comment": "5. Input Username (via Script)",
+      "command": "executeScript",
+      "target": "document.getElementsByName('username')[0].value='admin'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "type-pass-exp",
+      "comment": "6. Input Password (via Script)",
+      "command": "executeScript",
+      "target": "document.getElementsByName('password')[0].value='1234'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "click-login-exp",
+      "comment": "7. Klik tombol Login",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"]
+      ],
+      "value": ""
+    }, {
+      "id": "pause-2",
+      "comment": "8. Jeda proses login",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "nav-exp",
+      "comment": "9. Navigasi langsung ke halaman Ekspedisi",
+      "command": "open",
+      "target": "/expedition/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "wait-tab-exp",
+      "comment": "10. Menunggu tombol Tambah",
+      "command": "waitForElementPresent",
+      "target": "xpath=//input[@value='TAMBAH']",
+      "targets": [
+        ["xpath=//input[@value='TAMBAH']", "xpath:attributes"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "click-tab-exp",
+      "comment": "11. Klik tombol Tambah",
+      "command": "click",
+      "target": "xpath=//input[@value='TAMBAH']",
+      "targets": [
+        ["xpath=//input[@value='TAMBAH']", "xpath:attributes"]
+      ],
+      "value": ""
+    }, {
+      "id": "wait-form-exp",
+      "comment": "12. Menunggu Form Input terbuka",
+      "command": "waitForElementPresent",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "pause-3",
+      "comment": "13. Jeda sebelum mengisi form",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "type-name-exp",
+      "comment": "14. Input Nama Ekspedisi",
+      "command": "executeScript",
+      "target": "document.getElementsByName('name')[0].value='Test Ekspedisi'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "type-desc-exp",
+      "comment": "15. Input Keterangan Ekspedisi",
+      "command": "executeScript",
+      "target": "document.getElementsByName('description')[0].value='Keterangan otomatis dari script'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "click-save-exp",
+      "comment": "16. Simpan Ekspedisi Baru",
+      "command": "click",
+      "target": "xpath=//input[@value='SIMPAN']",
+      "targets": [
+        ["xpath=//input[@value='SIMPAN']", "xpath:attributes"]
+      ],
+      "value": ""
+    }, {
+      "id": "pause-4",
+      "comment": "17. Jeda setelah simpan",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "click-edit-exp",
+      "comment": "18. Cari 'Test Ekspedisi' dan klik Edit",
+      "command": "click",
+      "target": "xpath=//tr[td[contains(.,'Test Ekspedisi')]]//input[@value='EDIT']",
+      "targets": [
+        ["xpath=//tr[td[contains(.,'Test Ekspedisi')]]//input[@value='EDIT']", "xpath:attributes"]
+      ],
+      "value": ""
+    }, {
+      "id": "wait-edit-exp",
+      "comment": "19. Menunggu Form Edit",
+      "command": "waitForElementPresent",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "type-edit-exp",
+      "comment": "20. Update Nama Ekspedisi",
+      "command": "executeScript",
+      "target": "document.getElementsByName('name')[0].value='Test Ekspedisi Edited'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "click-save-edit-exp",
+      "comment": "21. Simpan Perubahan",
+      "command": "click",
+      "target": "xpath=//input[@value='SIMPAN']",
+      "targets": [
+        ["xpath=//input[@value='SIMPAN']", "xpath:attributes"]
+      ],
+      "value": ""
+    }, {
+      "id": "pause-5",
+      "comment": "22. Jeda setelah edit",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bypass-alert-exp",
+      "comment": "23. Bypass popup konfirmasi hapus",
+      "command": "executeScript",
+      "target": "window.confirm = function() { return true; }",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "click-del-exp",
+      "comment": "24. Cari 'Test Ekspedisi' dan klik Hapus",
+      "command": "click",
+      "target": "xpath=//tr[td[contains(.,'Test Ekspedisi')]]//input[@value='HAPUS']",
+      "targets": [
+        ["xpath=//tr[td[contains(.,'Test Ekspedisi')]]//input[@value='HAPUS']", "xpath:attributes"]
+      ],
+      "value": ""
+    }, {
+      "id": "pause-6",
+      "comment": "25. Jeda setelah hapus",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "logout-exp",
+      "comment": "26. Logout dari aplikasi",
+      "command": "open",
+      "target": "/login/signout.php",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f0af8888-9d20-4a41-bc47-42d98ee72a7e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7ed043ff-cd71-4ca3-acc2-02648b23fae7"]
+  }],
+  "urls": ["https://app.sbiz-app.my.id/"],
+  "plugins": []
+}
