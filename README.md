@@ -217,6 +217,9 @@ Captured data is processed to create a high-fidelity Allure Dashboard, providing
 ### 8.4 WebDev Reporting Showcase
 The reporting environment provides rich visualization of the testing lifecycle:
 
+> [!IMPORTANT]
+> **View Local Report**: [Open Allure Report Index](./allure-report/index.html) (Ensure you have generated the report first using `allure generate`).
+
 *   **Interactive Steps Monitoring**: Track each of the 26 execution steps with precise timestamps.
     ![Step Monitoring](./ss/report/8-jalan-report-menampilkan-all-step-dari-setiap-flow.png)
 *   **Visual Evidence Injection**: Every manual step included in the `.side` file is mapped to a screenshot in the report for undeniable verification.
