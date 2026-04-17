@@ -15,6 +15,11 @@ This project shows how to manage **Functional** and **Regression** testing using
     *   [Part D: Execution & Results](#part-d-execution--results)
     *   [Part E: Advanced Collaboration (Merger)](#part-e-advanced-collaboration-merger)
 7. [Script Snippet (.side structure)](#-7-script-snippet-side-structure)
+8. [Advanced WebDev Automation & Allure Reporting](#-8-advanced-webdev-automation--allure-reporting)
+    *   [8.1 Professional Regression Testing Definition](#81-professional-regression-testing-definition)
+    *   [8.2 Automation System Architecture](#82-automation-system-architecture)
+    *   [8.3 Step-by-Step Reporting Workflow](#83-step-by-step-reporting-workflow)
+    *   [8.4 WebDev Reporting Showcase](#84-webdev-reporting-showcase)
 
 ## 📚 1. Core Testing Concepts
 
@@ -157,3 +162,66 @@ Example of optimized code from `Flow-All-Merger-Selenium.side`:
   ]
 }
 ```
+
+---
+
+## 📊 8. Advanced WebDev Automation & Allure Reporting
+
+This section provides a deep dive into the professional-grade automation environment and the reporting workflow.
+
+### 8.1 Professional Regression Testing Definition
+In a professional software development environment, **Regression Testing** is an essential verification process performed after code modifications, environment updates, or system integrations. Its primary function is to confirm that existing functionalities remain intact and have not been adversely affected by recent changes. This practice is critical for maintaining software stability and preventing "functional drift" throughout the iterative development lifecycle.
+
+### 8.2 Automation System Architecture
+The following diagram illustrates the integration between the Selenium WebDriver engine, the Mocha orchestration layer, and the Allure reporting framework within our WebDev environment.
+
+![Automation System Architecture](./design/design-Selenium-WebDev-Report.png)
+
+### 8.3 Step-by-Step Reporting Workflow
+Follow this comprehensive guide to execute tests and generate professional reports within the WebDev environment:
+
+**Step 0: System Prerequisites**
+Before proceeding, ensure you have **Node.js** and **NPM** (Node Package Manager) installed on your system.
+1. Download the installer from the official [Node.js website](https://nodejs.org/).
+2. Follow the installation wizard for your OS (Windows/Mac/Linux).
+3. Verify installation by running `node -v` and `npm -v` in your terminal.
+![Software Requirements](./ss/report/1-install-selenium-web-dev.png)
+
+**Phase 1: Environment Initialization**
+Once Node.js is ready, initialize the workspace by installing all necessary core dependencies and automation drivers via NPM.
+```bash
+npm install
+```
+![NPM Installation](./ss/report/2-install-selenium-web-dev-via-npm.png)
+
+**Phase 2: Project Recording (Selenium IDE)**
+Start by recording your initial manual flow using the Selenium IDE extension. This captures the base interactions of your application.
+![Recording Flow](./ss/8-selinium-start-recording-ide-recording.png)
+
+**Phase 3: Conversion to Professional Test Runner**
+Export the recorded project from Selenium IDE into a structured **JavaScript/Mocha** format. This step moves the test from a simple recording to a scalable code base.
+![Export to JS](./ss/report/3.1-convertion-fitur-export-to-javascript-mocha.png)
+
+**Phase 4: Script Optimization (AI-Driven Refactoring)**
+Optimize the exported script using **Antigravity AI**. This process replaces unstable absolute paths or flaky commands with stable `executeScript` logic and interactive Allure steps.
+![AI Refactoring](./ss/report/3.2-convertion-file-flow-all-merger-selenium-side-ke-flow-all-merger-selenium-gunakan-ai-antigravity.png)
+
+**Phase 5: Automated Execution**
+Configure your `package.json` and execute the test suite via the command line interface (CLI) to trigger the automated browser sessions.
+![Run Test](./ss/report/5-runing-test-menggunakan-selenium-web-dev.png)
+
+**Phase 6: Result Persistence & Report Generation**
+Captured data is processed to create a high-fidelity Allure Dashboard, providing full visibility of the testing results and screenshots.
+![Report Generation](./ss/report/7-jalan-report.png)
+
+### 8.4 WebDev Reporting Showcase
+The reporting environment provides rich visualization of the testing lifecycle:
+
+*   **Interactive Steps Monitoring**: Track each of the 26 execution steps with precise timestamps.
+    ![Step Monitoring](./ss/report/8-jalan-report-menampilkan-all-step-dari-setiap-flow.png)
+*   **Visual Evidence Injection**: Every manual step included in the `.side` file is mapped to a screenshot in the report for undeniable verification.
+    ![Visual Evidence](./ss/report/9-jalan-report-menampilkan-all-flow-sucess-dan-evidance-screenshoot.png)
+*   **Portable HTML Distribution**: Export the dashboard to a standalone HTML format for easy sharing across the organization.
+    ![Portable Report](./ss/report/12-report-convert-to-html-tersimpan-di-folder-allure-report-hasil-nya-bisa-dilihat-dibrowser-dan-share-ke-komputer-lain-dan-standalone.png)
+
+

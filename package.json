@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "allure-js-commons": "^3.7.1",
+    "allure-mocha": "^3.7.1",
+    "mocha": "^11.7.5",
+    "selenium-webdriver": "^4.43.0"
+  },
+  "scripts": {
+    "test": "mocha Flow-All-Merger-Selenium.js --reporter allure-mocha",
+    "report": "allure serve allure-results"
+  }
+}
